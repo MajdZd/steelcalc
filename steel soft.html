@@ -143,13 +143,13 @@ ul {
 <body>
 
 <div id="myDIV" class="header">
-  <h2 style="margin:5px">طلبية حديد</h2>
-  <input type="text" id="myInput" placeholder="طول">
-  <input type="text" id="myInput1" placeholder="عدد">
-  <input type="text" id="myInput2" placeholder="قطر">
-  <span onclick="newElement()" class="addBtn">اجمع</span>
+  <h2 style="margin:5px">New Order</h2>
+  <input type="text" id="myInput" placeholder="Length">
+  <input type="text" id="myInput1" placeholder="Quantity">
+  <input type="text" id="myInput2" placeholder="Diameter">
+  <span onclick="newElement()" class="addBtn">Add</span>
 </div>
-<ul id="title" tagName="t">طول عدد قطر وزن (كغم) </ul>
+<ul id="title" tagName="t"></ul>
 <ul id="myUL">
 </ul>
 <ul id ="s">
@@ -269,7 +269,7 @@ function newElement() {
         var prev = document.getElementById("s")
         prev.removeChild(prev.childNodes[0])
   }
-  var sumt = document.createTextNode(ssum+":المجموع")
+  var sumt = document.createTextNode(ssum+"Total:")
   console.log(sumt)
   
   si.appendChild(sumt)
@@ -292,7 +292,7 @@ function newElement() {
       //prev.removeChild(prev.childNodes[0])
       console.log(prev.childNodes[0])
 
-      var sumtu = sum.toFixed(0)+":المجموع"
+      var sumtu = sum.toFixed(0)+"Total:"
   
       //si.appendChild(sumt)
       document.getElementById("s").innerHTML =sumtu
