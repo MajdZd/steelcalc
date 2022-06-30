@@ -88,6 +88,7 @@ ul li.checked::before {
   padding: 30px 40px;
   color: white;
   text-align: center;
+  font-family: arial;
 }
 
 /* Clear floats after the header */
@@ -120,6 +121,7 @@ input {
   cursor: pointer;
   transition: 0.3s;
   border-radius: 0;
+  font-family: arial;
 }
 
 .addBtn:hover {
@@ -269,7 +271,7 @@ function newElement() {
         var prev = document.getElementById("s")
         prev.removeChild(prev.childNodes[0])
   }
-  var sumt = document.createTextNode(ssum+"Total:")
+  var sumt = document.createTextNode("Total: "+ssum)
   console.log(sumt)
   
   si.appendChild(sumt)
@@ -292,7 +294,7 @@ function newElement() {
       //prev.removeChild(prev.childNodes[0])
       console.log(prev.childNodes[0])
 
-      var sumtu = sum.toFixed(0)+"Total:"
+      var sumtu = "Total: "+sum.toFixed(0)
   
       //si.appendChild(sumt)
       document.getElementById("s").innerHTML =sumtu
